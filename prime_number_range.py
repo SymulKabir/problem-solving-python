@@ -1,3 +1,11 @@
+# Task:
+# Find all prime numbers between two given numbers.
+
+# Example:
+# Input: 10, 30 → Output: [11, 13, 17, 19, 23, 29]
+
+# Hint: Check divisibility up to √n.
+
 import math;
 def prime_number_range():
     prime_numbers = []

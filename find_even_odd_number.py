@@ -1,3 +1,11 @@
+# Task:
+# Given a list of integers, find all even and  odd numbers.
+
+# Example:
+# Input: [1, 2, 3, 4, 5, 6]
+# Output: Even: [2, 4, 6], Odd: [1, 3, 5]
+
+
 input_list = input("Enter a list of numbers (ex: [1, 2, 3]): ")
 input_list = input_list.replace(" ", '').replace("'", '').replace('"','').replace("[", "").replace("]", "").split(",")
 
