@@ -1,3 +1,11 @@
+# Task:
+# Given a list of numbers, find the second largest distinct number.
+
+# Example:
+# Input: [10, 20, 4, 45, 99, 99]
+# Output: 45
+
+# Hint: Use set() or sorting logic.
 
 def find_second_largest_num(number_list):
     distinct_number = list(set(number_list));
