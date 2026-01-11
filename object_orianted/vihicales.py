@@ -1,11 +1,10 @@
-# ---------------- Base Class ----------------
 class Vihicales:
     def __init__(self, name, air_resistance, fuel_consumption):
         self.name = name
-        self.air_resistance = air_resistance        # drag coefficient
-        self.fuel_consumption = fuel_consumption    # liter per 100km
+        self.air_resistance = air_resistance
+        self.fuel_consumption = fuel_consumption
 
-        # 🔒 Encapsulation (Hidden property)
+        # Encapsulation (Hidden property)
         self.__maintenance_cost = 500
 
     # Getter
@@ -17,23 +16,20 @@ class Vihicales:
         if cost > 0:
             self.__maintenance_cost = cost
 
-    # Polymorphism method (override in child classes)
+    # Polymorphism method
     def max_speed(self):
         return 0
 
     def cost_per_km(self, fuel_price):
-        """Economic calculation"""
         return (self.fuel_consumption / 100) * fuel_price
 
     def carbon_emission(self):
-        """Extra feature"""
         return self.fuel_consumption * 2.3
 
     def __str__(self):
         return f"{self.name} | Speed: {self.max_speed()} km/h"
 
 
-# ---------------- Child Classes ----------------
 class Car(Vihicales):
     def max_speed(self):
         return 180
@@ -63,7 +59,7 @@ class Cycle(Vihicales):
         return 40
 
     def cost_per_km(self, fuel_price):
-        return 0   # 🚴 No fuel cost
+        return 0   
 
 
 # ---------------- Utility ----------------
