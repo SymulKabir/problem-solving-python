@@ -4,7 +4,7 @@ class Vihicales:
         self.air_resistance = air_resistance
         self.fuel_consumption = fuel_consumption
 
-        # Encapsulation (Hidden property)
+        # Encapsulation
         self.__maintenance_cost = 500
 
     # Getter
