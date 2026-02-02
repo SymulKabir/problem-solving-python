@@ -74,10 +74,12 @@ plane = Plane("Plane", 0.9, 50)
 train = Train("Train", 0.4, 5)
 cycle = Cycle()
 
+
 vehicles = [car, boat, plane, train, cycle]
 fuel_price = 120
 
 for v in vehicles:
+    print("vehicle -->>>", v)
     print(v)
     print("Cost per km:", v.cost_per_km(fuel_price))
     print("CO2:", v.carbon_emission())
