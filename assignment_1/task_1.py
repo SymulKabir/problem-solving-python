@@ -3,23 +3,23 @@
 # Key Concept: Use open() with mode 'w' for writing and 'r' for reading. 
 
 import os
-file_root_path = 'files'
+ROOT_FOLDER = 'files'
 
 
 def create_file(file_name, file_content = ""):
     if not file_name:
         print("No filename found")
 
-    file = open(f"{file_root_path}/{file_name}", "w")
+    file = open(f"{ROOT_FOLDER}/{file_name}", "w")
     file.write(file_content)
     file.close()
     return True
 
 def read_file(file_name):
-    if not os.path.exists(f"{file_root_path}/{file_name}"):
+    if not os.path.exists(f"{ROOT_FOLDER}/{file_name}"):
         print("Please provide filename")
         return None
-    file = open(f"{file_root_path}/{file_name}", "r")
+    file = open(f"{ROOT_FOLDER}/{file_name}", "r")
     content = file.read()
     return content
 
