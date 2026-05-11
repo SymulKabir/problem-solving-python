@@ -34,7 +34,7 @@ company_B = [15, 18, 30, 35, 55]
 fig, ax = plt.subplots()
 
 ax.plot(years, company_A, 'o--', color='red', label='Company A')
-ax.plot(years, company_B, 's-', color='blue', label='Company B')
+# ax.plot(years, company_B, 's-', color='blue', label='Company B')
 
 ax.set_title("Company Revenue Growth")
 ax.set_xlabel("Year")

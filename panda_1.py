@@ -1,5 +1,6 @@
 import pandas as pd
 import numpy as np
+ 
 
 data = {
     'Transaction_ID': [101, 102, 102, 103, 104, 105, 106, 107, 108],
@@ -10,9 +11,10 @@ data = {
     'Quantity': [1, 2, 2, 1, 1, 2, 1, 3, 1]
 }
 
-df = pd.DataFrame(data)
-print(df) 
 
-df['Customer'] = df['Customer'].str.strip().str.title()
-print("=========================")
-print(df)
+df = pd.DataFrame(data)
+sanitized = df.drop_duplicates()
+# sanitized = df.drop_duplicates(["Date", "Customer"])
+
+print("DATA FRAME -->", df)
+print("senitized -->", sanitized)
